@@ -1,0 +1,164 @@
+/* IMPORTAÇÃO DA FONTE UTILIZADA NO PROJETO: GILBERT e GILBERT-COLOR */
+@import url("https://use.typekit.net/uvr1mly.css");
+@import url("https://use.typekit.net/uvr1mly.css%22%3E");
+
+
+/* ATRIBUIÇÕES NAS PROPRIEDADES RAIZ DA PÁGINA */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html {
+    font-size: 62.5%; /* A cada 1rem será considerado 10px */
+}
+
+html, body {
+    height: 100vh;
+    font-family: "gilbert-color", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-size: 1.6rem; /* rem - MULTIPLICADO PELO ROOT (1.6rem = 16px). Utilizando com o intuito de deixar o projeto responsivo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../images/backgrounds/BG-pagina_jogo.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: repeat;
+}
+
+
+/* ESTILIZAÇÃO - HEADER */
+header {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: solid 1px black; */
+}
+
+header .playerData {
+    height: 35px;
+    width: 100%;
+    max-width: 614px;
+    padding: 3px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+header .playerData span {
+    font-family: "gilbert-color";
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+
+/* ESTILIZAÇÃO DO CONTEÚDO PRINCIPAL - MAIN */
+main .grid {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px 0px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+
+    /* border-radius: 10px;
+    background-color: rgb(0, 0, 0, 0.1); */
+}
+
+main .grid .card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    position: relative;
+    transition: all 800ms ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+main .grid .card .face {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    transition: all 800ms ease;
+}
+
+main .grid .card .face.front {
+    transform: rotateY(180deg);
+}
+
+main .grid .card .face.back {
+    background-image: url(../images/cards/verso-cartas.png);
+    backface-visibility: hidden;
+}
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.7;
+}
+
+/* ESTILIZAÇÃO - FOOTER */
+footer {
+    height: 25px;
+    width: 100%;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    font-family: "gilbert";
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    text-decoration: underline black;
+    letter-spacing: 1px;
+    color: black;
+}
+
+
+/* MEDIA QUERIES - RESPONSIVIDADE NO PROJETO */
+
+@media (max-width: 768px) {
+    
+    html {
+        font-size: 50%;
+    }
+
+    header .playerData {
+        max-width: 400px;
+        padding-top: 5px;
+    }
+
+    main .grid {
+        max-width: 500px;
+        margin: 15px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+}

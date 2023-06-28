@@ -1,0 +1,190 @@
+/* IMPORTAÇÃO DA FONTE UTILIZADA NO PROJETO: GILBERT e GILBERT-COLOR */
+@import url("https://use.typekit.net/uvr1mly.css");
+@import url("https://use.typekit.net/uvr1mly.css%22%3E");
+
+
+/* ATRIBUIÇÕES NAS PROPRIEDADES RAIZ DA PÁGINA */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html {
+    font-size: 62.5%; /* A cada 1rem será considerado 10px */
+}
+
+html, body {
+    height: 100vh;
+    font-family: "gilbert-color", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-size: 1.6rem; /* rem - MULTIPLICADO PELO ROOT (1.6rem = 16px). Utilizando com o intuito de deixar o projeto responsivo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../images/backgrounds/BG-PAGINA_LOGIN-DGPreto.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+/* ESTILIZAÇÃO DO CONTEÚDO PRINCIPAL - MAIN e FORMS */
+main .formLogin {
+    width: 100%;
+    max-width: 410px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(0, 0, 0, 0.8) -6px -2px 16px 0px;
+    border-radius: 15px;
+}
+
+main .formLogin .headerForm {
+    margin: 40px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .formLogin .headerForm .logo img {
+    height: 125px;
+}
+
+main .formLogin .headerForm .slogan {
+    margin-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.2rem; /* 12 pixels */
+    font-weight: 400;
+    font-style: oblique;
+    letter-spacing: 1px;
+}
+
+main .formLogin .mainForm {
+    margin: 0px 30px 40px;
+}
+
+main .formLogin .mainForm form .inputName, .inputEmail {
+    margin: 15px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .formLogin .mainForm form label {
+    font-size: 2rem; /* 20 pixels */
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+main .formLogin .mainForm form input {
+    height: 32px;
+    padding: 10px 5px;
+    font-size: 1.4rem; /* 14 pixels*/
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+main .formLogin .mainForm form .buttonSubmit {
+    margin-top: 45px;
+}
+
+main .formLogin .mainForm form .buttonSubmit button {
+    height: 45px;
+    width: 170px;
+    margin: auto;
+    display: flex;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 15px;
+    border: solid 1.7px #FFE9F5;
+    justify-content: center;
+    align-items: center;
+    font-family: "gilbert";
+    font-size: 2.2rem; /* 22 pixels*/
+    color: #FFFFFF;
+    letter-spacing: 2.5px;
+}
+
+main .formLogin .mainForm form .buttonSubmit button:hover {
+    transition: .7s;
+    box-shadow: #000000 5px 5px;
+}
+
+
+/* ESTILIZAÇÃO - FOOTER */
+footer {
+    height: 30px;
+    margin: 0px 0px 15px 0px;
+    padding-left: 50px;
+    border-top: 1px black;
+}
+
+footer .contact {
+    width: 125px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid 1px black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.8rem; /* 18 pixels*/
+    letter-spacing: 1px;
+    color: black;
+}
+
+footer img {
+    height: 20px;
+    margin-top: 2px;
+    margin-right: 7px;
+}
+
+
+/* MEDIA QUERIES - RESPONSIVIDADE NO PROJETO */
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        justify-content: center;
+    }
+
+    main .formLogin {
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+    footer .contact {
+        height: 60px;
+        width: 60px;
+        margin: 60px 0px 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50px;
+
+    }
+
+    footer .contact img {
+        height: 50px;
+        margin: 0;
+    }
+
+    footer .contact p {
+        display: none;
+    }
+}
